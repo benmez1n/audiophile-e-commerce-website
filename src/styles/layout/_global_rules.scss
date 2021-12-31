@@ -1,0 +1,31 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200;400;500;600;700&display=swap");
+@import "../helpers/mixins";
+@import "../helpers/place_holders";
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding:0;
+    font-family: "Manrope";
+}
+:root{
+    --black-bg:#191919;
+    --orange: #d77033;
+    --very-light-orange: #e4986d;
+    --light-orange:#dd7f48;
+    --nav-border:rgb(139, 139, 139);
+    --dark-grey:rgb(127, 127, 127);
+    --very-light-gray:rgb(240, 240, 240);
+    --txt-black:#181818;
+}
+.container{
+    width:1170px;
+    margin:auto;
+}
+a{
+    text-decoration: none;
+    text-transform: uppercase;
+}
+.see-product-btn{
+    @include product-btn(var(--orange),var(--very-light-orange),white,white)
+}
+ul{list-style: none;}

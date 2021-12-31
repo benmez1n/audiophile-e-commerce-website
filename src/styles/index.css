@@ -1,0 +1,304 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200;400;500;600;700&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Manrope";
+}
+
+:root {
+  --black-bg:#191919;
+  --orange: #d77033;
+  --very-light-orange: #e4986d;
+  --light-orange:#dd7f48;
+  --nav-border:rgb(139, 139, 139);
+  --dark-grey:rgb(127, 127, 127);
+  --very-light-gray:rgb(240, 240, 240);
+  --txt-black:#181818;
+}
+
+.container {
+  width: 1170px;
+  margin: auto;
+}
+
+a {
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.see-product-btn {
+  padding: 0.9em 3em;
+  font-size: 1em;
+  font-weight: 600;
+  background-color: var(--orange);
+  color: white;
+  transition: background-color ease 0.7s;
+}
+.see-product-btn:hover {
+  background-color: var(--very-light-orange);
+  color: white;
+}
+
+ul {
+  list-style: none;
+}
+
+nav {
+  background-color: var(--black-bg);
+}
+nav .container {
+  padding: 1.5em 0;
+  border-bottom: 1px solid var(--nav-border);
+  display: flex;
+  justify-content: space-between;
+}
+nav ul {
+  display: flex;
+}
+nav ul li {
+  font-weight: 500;
+  cursor: pointer;
+}
+nav ul li a {
+  color: white;
+  transition: color ease 0.7s;
+}
+nav ul li a:hover {
+  color: var(--orange);
+}
+nav ul li:not(:last-child) {
+  margin-right: 3.5em;
+}
+
+.home #part-one {
+  padding: 2em 0;
+  background-image: url(./../assets/images/image-hero.jpg);
+  background-position-y: -4em;
+  color: white;
+}
+.home #part-one .container > div {
+  width: 50%;
+  padding-top: 8em;
+  padding-bottom: 5em;
+}
+.home #part-one .container > div span {
+  letter-spacing: 10px;
+  color: var(--dark-grey);
+  font-weight: 500;
+}
+.home #part-one .container > div h1 {
+  font-size: 4em;
+  font-weight: 700;
+}
+.home #part-one .container > div h1:first-child {
+  margin-top: 2em;
+}
+.home #part-one .container > div p {
+  color: var(--dark-grey);
+  width: 64%;
+  font-size: 1em;
+  font-weight: 500;
+  line-height: 1.5;
+  margin-top: 2em;
+  margin-bottom: 4em;
+}
+.home #part-two {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.home #part-two #zx7-btn {
+  padding: 0.9em 3em;
+  font-size: 1em;
+  font-weight: 600;
+  background-color: transparent;
+  color: var(--txt-black);
+  transition: background-color ease 0.7s;
+  border: 1px solid var(--black-bg);
+  margin-top: 2.2em;
+}
+.home #part-two #zx7-btn:hover {
+  background-color: var(--black-bg);
+  color: white;
+}
+.home #part-two #part-two-1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  color: white;
+  background: var(--light-orange) url(./../assets/images/pattern-circles.svg) no-repeat;
+  padding: 4em;
+  padding-left: 8em;
+  padding-right: 6em;
+  border-radius: 12px;
+}
+.home #part-two #part-two-1 img {
+  width: 40%;
+  margin-bottom: -4.4em;
+}
+.home #part-two #part-two-1 div {
+  width: 50%;
+}
+.home #part-two #part-two-1 div h1 {
+  font-size: 4.5em;
+  font-weight: 700;
+  letter-spacing: 3px;
+  line-height: 1;
+}
+.home #part-two #part-two-1 div p {
+  font-size: 1em;
+  font-weight: 200;
+  color: var(--very-light-gray);
+  margin: 1.2em 0 4em;
+  width: 80%;
+  word-spacing: 4px;
+}
+.home #part-two #part-two-1 div #zx9-btn {
+  padding: 0.9em 3em;
+  font-size: 1em;
+  font-weight: 600;
+  background-color: black;
+  color: white;
+  transition: background-color ease 0.7s;
+}
+.home #part-two #part-two-1 div #zx9-btn:hover {
+  background-color: white;
+  color: black;
+}
+.home #part-two #part-two-2 {
+  margin: 3em 0;
+  height: 300px;
+  border-radius: 12px;
+  background: url(./../assets/images/image-speaker-zx7.jpg) no-repeat;
+  background-size: cover;
+}
+.home #part-two #part-two-2 div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 50%;
+  height: 100%;
+  place-items: center;
+  place-content: center;
+}
+.home #part-two #part-two-3 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 4em;
+}
+.home #part-two #part-two-3 img, .home #part-two #part-two-3 div {
+  border-radius: 15px;
+  width: 47%;
+}
+.home #part-two #part-two-3 div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: var(--very-light-gray);
+  place-items: center;
+  place-content: center;
+}
+.home #part-three {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.home #part-three img, .home #part-three div {
+  width: 45%;
+}
+.home #part-three img {
+  border-radius: 20px;
+}
+.home #part-three div {
+  margin-top: 10em;
+}
+.home #part-three div h1 {
+  font-size: 2.8em;
+  font-weight: 600;
+  line-height: 1;
+}
+.home #part-three div h1 span {
+  color: var(--orange);
+}
+.home #part-three div p {
+  font-size: 1em;
+  font-weight: 300;
+  color: var(--nav-border);
+  margin-top: 3em;
+  line-height: 1.6;
+}
+
+.categories {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 12em 0 8em;
+}
+.categories div {
+  background-color: var(--very-light-gray);
+  width: 30%;
+  text-align: center;
+  padding-bottom: 2.5em;
+  color: var(--txt-black);
+  border-radius: 1em;
+}
+.categories div img[alt=category-img] {
+  width: 40%;
+  margin-top: -3em;
+}
+.categories div h1 {
+  font-size: 1.2em;
+  font-weight: 600;
+  margin-bottom: 1.3em;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.categories div a {
+  font-size: 0.9em;
+  font-weight: 500;
+  color: var(--txt-black);
+  transition: color 0.7s;
+}
+.categories div a:hover {
+  color: var(--orange);
+}
+.categories div a img {
+  margin-left: 10px;
+}
+
+footer {
+  background-color: var(--black-bg);
+  margin-top: 12em;
+}
+footer nav .container {
+  padding-top: 4.5em;
+  border-bottom: none;
+}
+footer .container div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 3em 0 2em;
+}
+footer .container div p {
+  width: 47%;
+}
+footer .container div ul {
+  width: 12%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 4em;
+}
+footer .container div ul li:hover {
+  color: var(--orange);
+}
+footer p {
+  color: var(--dark-grey);
+  line-height: 1.4;
+  padding-bottom: 2em;
+}
+
+/*# sourceMappingURL=index.css.map */

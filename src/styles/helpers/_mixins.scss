@@ -1,0 +1,20 @@
+@mixin flex($direction:row,$content:space-between) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $content;
+}
+@mixin font-param($size,$weight:400){
+    font-size: $size;
+    font-weight: $weight;
+}
+@mixin product-btn($color-bg,$color-bgx,$color,$colorx){
+    padding: .9em 3em;
+    @include font-param(1em,600);
+    background-color: $color-bg;
+    color:$color;
+    transition: background-color ease 0.7s ;
+    &:hover{
+        background-color: $color-bgx;
+        color:$colorx
+    }
+}

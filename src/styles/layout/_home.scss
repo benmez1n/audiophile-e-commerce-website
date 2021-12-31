@@ -1,0 +1,126 @@
+@import "../helpers/mixins";
+.home{
+    #part-one{
+        padding: 2em 0;
+        background-image: url(./../assets/images/image-hero.jpg);
+        background-position-y: -4em;
+        color:white;
+        .container{
+            >div{
+                width:50%;
+                padding : {
+                    top: 8em;
+                    bottom: 5em;
+                }
+                span{
+                    letter-spacing: 10px;
+                    color:var(--dark-grey);
+                    font-weight: 500;
+                }
+                h1{    
+                    @include font-param(4em,700);                   
+                    &:first-child{
+                        margin-top: 2em;
+                    }
+                }
+                p{
+                    color: var(--dark-grey);
+                    width:64%;
+                    @include font-param(1em,500);
+                    line-height: 1.5;
+                    margin: {
+                        top:2em;
+                        bottom:4em;
+                    }
+                }
+            }
+        }   
+    }
+    #part-two{
+        @include flex(column);
+        #zx7-btn{
+            @include product-btn(transparent,var(--black-bg),var(--txt-black),white);
+            border : 1px solid var(--black-bg);
+            margin-top: 2.2em;
+        }
+        #part-two-1{
+            @include flex;
+            color:white;
+            background: var(--light-orange) url(./../assets/images/pattern-circles.svg) no-repeat;
+            padding: 4em {
+                left:8em;
+                right:6em;
+            }
+            border-radius: 12px;
+            img{
+                width:40%;
+                margin-bottom: -4.4em
+            }
+            div{
+                width:50%;
+                h1{
+                    @include font-param(4.5em, 700);
+                    letter-spacing:3px;
+                    line-height: 1;
+                }
+                p{
+                    @include font-param(1em,200);
+                    color: var(--very-light-gray);
+                    margin:1.2em 0 4em;  
+                    width:80%;
+                    word-spacing: 4px;
+                }
+                #zx9-btn{
+                    @include product-btn(black,white,white,black);
+                }
+            }
+        }
+        #part-two-2{
+            margin:3em 0;
+            height: 300px;
+            border-radius: 12px;
+            background: url(./../assets/images/image-speaker-zx7.jpg) no-repeat;
+            background-size: cover;
+            div{
+                @include flex(column);
+                width:50%;
+                height: 100%;
+                place-items: center;
+                place-content: center;
+            }
+        }
+        #part-two-3{
+            @include flex;
+            margin-bottom: 4em;
+            img,div{
+                border-radius: 15px;
+                width:47%;
+            }
+            div{
+                @include flex(column);
+                background-color: var(--very-light-gray);
+                place-items: center;
+                place-content: center;
+            }
+        }
+    }
+    #part-three{
+        @include flex;
+        img,div{width:45%}
+        img{border-radius: 20px;}
+        div{
+            margin-top: 10em;
+            h1{
+                @include font-param(2.8em,600);
+                line-height: 1;
+                span{color:var(--orange)}
+            }
+            p{
+                @include font-param(1em,300);
+                color:var(--nav-border);
+                margin-top:3em;
+                line-height: 1.6;
+            }
+        }
+    }
+}

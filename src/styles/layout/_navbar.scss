@@ -1,0 +1,27 @@
+nav{
+   background-color: var(--black-bg);
+   .container{
+      padding:1.5em 0;
+      border-bottom: 1px solid var(--nav-border);
+      display: flex;
+      justify-content: space-between;
+   }
+   ul{
+    display: flex;
+      li{
+         font-weight: 500;
+         cursor: pointer;
+         a{
+            color:white;
+            transition: color ease .7s;
+            &:hover{
+               color:var(--orange);
+            }
+         }
+         &:not(:last-child){
+            margin-right: 3.5em;
+         }
+      }
+   }
+
+}

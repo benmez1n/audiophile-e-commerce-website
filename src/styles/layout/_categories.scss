@@ -1,0 +1,34 @@
+@import '../helpers/mixins';
+.categories{
+    @include flex;
+    margin: 12em 0 8em;
+    div{
+        background-color: var(--very-light-gray);
+        width:30%;
+        text-align: center;
+        padding-bottom: 2.5em;
+        color:var(--txt-black);
+        border-radius: 1em;
+        img[alt="category-img"]{
+            width:40%;
+            margin-top: -3em;
+        }
+        h1{
+            @include font-param(1.2em,600);
+            margin-bottom: 1.3em;
+            text-transform:uppercase;
+            letter-spacing: 2px;
+        }
+        a{
+            @include font-param(0.9em,500);
+            color:var(--txt-black);
+            transition: color .7s;
+            &:hover{
+                color:var(--orange);
+            }
+            img{
+                margin-left:10px;
+            }
+        }
+    }
+}
