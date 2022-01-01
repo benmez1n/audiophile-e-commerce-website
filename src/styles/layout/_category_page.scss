@@ -1,0 +1,39 @@
+@import './../helpers/mixins';
+@import './../helpers/place_holders';
+.products-page{
+    color: var(--txt-black);
+    header{
+        background-color: var(--black-bg);
+        height: 12em;
+        display: flex;
+        @include font-param(1.5em,500);
+        text-align: center;
+        place-items: center;
+        color: white;
+        letter-spacing: 3px;
+        margin-bottom: 3em;
+    }
+    >.container{
+        display: grid;
+        gap:8em;
+        .product-presentation{
+            @include flex;
+            &:nth-child(even){
+                @include flex(row-reverse);
+            }
+            img{
+                width: 50%;
+                border-radius: 1em;
+            }
+            div{
+                @extend %product-intro;
+                p{
+                    margin-bottom: 4em;
+                }
+            }
+        }
+    }
+    .categories{
+        margin:2em 0;
+    }
+}

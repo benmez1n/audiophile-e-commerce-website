@@ -3,7 +3,8 @@ export default headphones = [
     "HEADPHONES", 
     {
         id:1 ,
-        link:"/headphones/xx99-mark-two",
+        img:"images/product-xx99-mark-two-headphones/image-product.jpg",
+        link:"/headphones/1",
         name:"XX99 MARK II",
         new:true,
         descrption:"The new XX99 Mark II headphones is the pinnacle of pristine audio. It redefines your premium headphone experience by reproducing the balanced depth and precision of studio-quality sound.",
@@ -33,31 +34,32 @@ export default headphones = [
             }
         ],
         gallery : {
-            first : "images\product-xx99-mark-two-headphones\image-gallery-1.jpg",
-            second : "images\product-xx99-mark-two-headphones\image-gallery-2.jpg",
-            third :"images\product-xx99-mark-two-headphones\image-gallery-3.jpg" 
+            first : "images/product-xx99-mark-two-headphones/image-gallery-1.jpg",
+            second : "images/product-xx99-mark-two-headphones/image-gallery-2.jpg",
+            third :"images/product-xx99-mark-two-headphones/image-gallery-3.jpg" 
         },
         others : [
             {
-                link:"/headphones/x99-mark-one",
+                link:"/headphones/2",
                 name:"XX99 MARK I",
                 image:"images/category-headphones/image-xx99-mark-one.jpg"
             },
             {
-                link:"/headphones/xx59",
+                link:"/headphones/3",
                 name:"XX59",
-                image:"images/category/headphones/image-xx59"
+                image:"images/category-headphones/image-xx59.jpg"
             },
             {
-                link:"/speakers/zx9-speaker",
+                link:"/speakers/1",
                 name:"ZX9 SPEAKER",
-                image:"images/category/speakers/image-zx9.jpg"
+                image:"images/category-speakers/image-zx9.jpg"
             }
         ]
     },
     {
         id:2 ,
-        link:"/headphones/x99-mark-one",
+        img:"images/product-xx99-mark-one-headphones/image-product.jpg",
+        link:"/headphones/2",
         name:"XX99 MARK I",
         new:false,
         descrption:"As the gold standard for headphones, the classic XX99 Mark I offers detailed and accurate audio reproduction for audiophiles, mixing engineers, and music aficionados alike in studios and on the go.",
@@ -83,31 +85,32 @@ export default headphones = [
             }
         ],
         gallery : {
-            first : "images\product-xx99-mark-one-headphones\image-gallery-1.jpg",
-            second : "images\product-xx99-mark-one-headphones\image-gallery-2.jpg",
-            third :"images\product-xx99-mark-one-headphones\image-gallery-3.jpg" 
+            first : "images/product-xx99-mark-one-headphones/image-gallery-1.jpg",
+            second : "images/product-xx99-mark-one-headphones/image-gallery-2.jpg",
+            third :"images/product-xx99-mark-one-headphones/image-gallery-3.jpg" 
         },
         others : [
             {
-                link:"/headphones/xx99-mark-two",
+                link:"/headphones/1",
                 name:"XX99 MK II",
-                image:"images/category/headphones/image-xx99-mark-two.jpg"
+                image:"images/category-headphones/image-xx99-mark-two.jpg"
             },
             {
-                link:"/headphones/xx59",
+                link:"/headphones/3",
                 name:"XX59",
-                image:"images/category/headphones/image-xx59.jpg"
+                image:"images/category-headphones/image-xx59.jpg"
             },
             {
-                link:"/speakers/zx9-speaker",
+                link:"/speakers/1",
                 name:"ZX9 SPEAKER",
-                image:"images/category/speakers/image-zx9.jpg",
+                image:"images/category-speakers/image-zx9.jpg",
             }
         ]
     },
     {
         id:3 ,
-        link:"/headphones/xx59",
+        img:"images/product-xx59-headphones/image-product.jpg",
+        link:"/headphones/3",
         name:"XX59",
         new:false,
         descrption:"Enjoy your audio almost anywhere and customize it to your specific tastes with the XX59 headphones. The stylish yet durable versatile wireless headset is a brilliant companion at home or on the move.",
@@ -133,25 +136,25 @@ export default headphones = [
             },
         ],
         gallery : {
-            first : "images\product-xx59-headphones\image-gallery-1.jpg",
-            second : "images\product-xx59-headphones\image-gallery-2.jpg",
-            third :"images\product-xx59-headphones\image-gallery-3.jpg" 
+            first : "images/product-xx59-headphones/image-gallery-1.jpg",
+            second : "images/product-xx59-headphones/image-gallery-2.jpg",
+            third :"images/product-xx59-headphones/image-gallery-3.jpg" 
         },
         others : [
             {
-                link:"/headphones/xx99-mark-two",
+                link:"/headphones/1",
                 name:"XX99 MK II",
-                image:"images/category/headphones/image-xx99-mark-two.jpg"                
+                image:"images/category-headphones/image-xx99-mark-two.jpg"                
             },
             {                    
-                link:"/headphones/xx99-mark-one",
+                link:"/headphones/2",
                 name:"XX99 MK I",
-                image:"images/category/headphones/image-xx99-mark-one.jpg"                
+                image:"images/category-headphones/image-xx99-mark-one.jpg"                
             },
             {
-                link:"/speakers/zx9-speaker",
+                link:"/speakers/1",
                 name:"ZX9 SPEAKER",
-                image:"images/category/speakers/image-zx9.jpg"
+                image:"images/category-speakers/image-zx9.jpg"
             }
         ]
     }

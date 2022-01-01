@@ -2,10 +2,13 @@
 .home{
     #part-one{
         padding: 2em 0;
-        background-image: url(./../assets/images/image-hero.jpg);
-        background-position-y: -4em;
+        background-color: var(--black-bg);
         color:white;
         .container{
+            background-image: url(./../assets/images/image-hero.jpg);
+            background-size: cover;
+            background-position-y: -4em;
+            background-position-x: 5em;
             >div{
                 width:50%;
                 padding : {
@@ -101,25 +104,6 @@
                 background-color: var(--very-light-gray);
                 place-items: center;
                 place-content: center;
-            }
-        }
-    }
-    #part-three{
-        @include flex;
-        img,div{width:45%}
-        img{border-radius: 20px;}
-        div{
-            margin-top: 10em;
-            h1{
-                @include font-param(2.8em,600);
-                line-height: 1;
-                span{color:var(--orange)}
-            }
-            p{
-                @include font-param(1em,300);
-                color:var(--nav-border);
-                margin-top:3em;
-                line-height: 1.6;
             }
         }
     }

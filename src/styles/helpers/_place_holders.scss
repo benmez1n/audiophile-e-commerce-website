@@ -1,0 +1,14 @@
+%product-intro{
+    width: 40%;
+    margin-top: 6em;
+    h1{
+        @include font-param(2.2em,600);
+        line-height: 1.2;
+        &:first-of-type{
+            margin-top: .5em;
+        }
+        &:last-of-type{
+            margin-bottom: 1em;
+        }
+    }
+}

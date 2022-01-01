@@ -4,8 +4,13 @@ footer{
     margin-top: 12em;
     nav{
         .container{
-            padding-top: 4.5em;
+            padding:0;
             border-bottom: none;
+            >img{
+                padding-top: 4.4em;
+                border-top: 5px solid var(--orange);
+            }
+            ul{padding-top: 4.4em}
         }
     }
     .container div{

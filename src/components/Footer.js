@@ -16,9 +16,9 @@ const Footer = () => {
                     Come and visit our demo facility - we’re open 7 days a week.
                     </p>
                     <ul>
-                        <li><img src="images/shared/icon-facebook.svg" alt=""/></li>
-                        <li><img src="images/shared/icon-instagram.svg" alt=""/></li>
-                        <li><img src="images/shared/icon-twitter.svg" alt=""/></li>
+                        <li><img src="../images/shared/icon-facebook.svg" alt=""/></li>
+                        <li><img src="../images/shared/icon-instagram.svg" alt=""/></li>
+                        <li><img src="../images/shared/icon-twitter.svg" alt=""/></li>
                     </ul>
                 </div>
                 <p>Copyright 2021. All Rights Reserved</p>

@@ -1,0 +1,20 @@
+@import './../helpers/mixins';
+#best-gear{
+    @include flex;
+    img,div{width:45%}
+    img{border-radius: 20px;}
+    div{
+        margin-top: 10em;
+        h1{
+            @include font-param(2.8em,600);
+            line-height: 1;
+            span{color:var(--orange)}
+        }
+        p{
+            @include font-param(1em,300);
+            color:var(--nav-border);
+            margin-top:3em;
+            line-height: 1.6;
+        }
+    }
+}

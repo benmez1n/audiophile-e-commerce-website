@@ -1,9 +1,8 @@
 @use 'layout/global_rules';
-@use 'helpers/mixins';
-@use 'helpers/place_holders';
 @use 'layout/navbar';
 @use 'layout/home';
 @use './layout/categories';
-
-
-@use './layout/footer'
+@use './layout/category_page';
+@use './layout/product';
+@use './layout/best_gear';
+@use './layout/footer';

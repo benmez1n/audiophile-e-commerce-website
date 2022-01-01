@@ -16,6 +16,7 @@
     --dark-grey:rgb(127, 127, 127);
     --very-light-gray:rgb(240, 240, 240);
     --txt-black:#181818;
+    --light-gray:rgb(211, 209, 209);
 }
 .container{
     width:1170px;
@@ -25,7 +26,18 @@ a{
     text-decoration: none;
     text-transform: uppercase;
 }
+ul{list-style: none;}
+p{
+    @include font-param(1em,300);
+    color: var(--nav-border);
+    line-height: 1.7;
+}
+h1{text-transform: uppercase}
 .see-product-btn{
     @include product-btn(var(--orange),var(--very-light-orange),white,white)
 }
-ul{list-style: none;}
+.new{
+    @include font-param(1em,300);
+    letter-spacing: .6em;
+    color: var(--orange);
+}

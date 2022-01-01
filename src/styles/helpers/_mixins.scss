@@ -8,11 +8,13 @@
     font-weight: $weight;
 }
 @mixin product-btn($color-bg,$color-bgx,$color,$colorx){
-    padding: .9em 3em;
+    padding: .7em 2.5em;
     @include font-param(1em,600);
     background-color: $color-bg;
     color:$color;
+    text-transform: uppercase;
     transition: background-color ease 0.7s ;
+    cursor: pointer;
     &:hover{
         background-color: $color-bgx;
         color:$colorx

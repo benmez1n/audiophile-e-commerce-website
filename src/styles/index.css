@@ -15,6 +15,7 @@
   --dark-grey:rgb(127, 127, 127);
   --very-light-gray:rgb(240, 240, 240);
   --txt-black:#181818;
+  --light-gray:rgb(211, 209, 209);
 }
 
 .container {
@@ -27,21 +28,41 @@ a {
   text-transform: uppercase;
 }
 
+ul {
+  list-style: none;
+}
+
+p {
+  font-size: 1em;
+  font-weight: 300;
+  color: var(--nav-border);
+  line-height: 1.7;
+}
+
+h1 {
+  text-transform: uppercase;
+}
+
 .see-product-btn {
-  padding: 0.9em 3em;
+  padding: 0.7em 2.5em;
   font-size: 1em;
   font-weight: 600;
   background-color: var(--orange);
   color: white;
+  text-transform: uppercase;
   transition: background-color ease 0.7s;
+  cursor: pointer;
 }
 .see-product-btn:hover {
   background-color: var(--very-light-orange);
   color: white;
 }
 
-ul {
-  list-style: none;
+.new {
+  font-size: 1em;
+  font-weight: 300;
+  letter-spacing: 0.6em;
+  color: var(--orange);
 }
 
 nav {
@@ -73,9 +94,14 @@ nav ul li:not(:last-child) {
 
 .home #part-one {
   padding: 2em 0;
-  background-image: url(./../assets/images/image-hero.jpg);
-  background-position-y: -4em;
+  background-color: var(--black-bg);
   color: white;
+}
+.home #part-one .container {
+  background-image: url(./../assets/images/image-hero.jpg);
+  background-size: cover;
+  background-position-y: -4em;
+  background-position-x: 5em;
 }
 .home #part-one .container > div {
   width: 50%;
@@ -109,12 +135,14 @@ nav ul li:not(:last-child) {
   justify-content: space-between;
 }
 .home #part-two #zx7-btn {
-  padding: 0.9em 3em;
+  padding: 0.7em 2.5em;
   font-size: 1em;
   font-weight: 600;
   background-color: transparent;
   color: var(--txt-black);
+  text-transform: uppercase;
   transition: background-color ease 0.7s;
+  cursor: pointer;
   border: 1px solid var(--black-bg);
   margin-top: 2.2em;
 }
@@ -155,12 +183,14 @@ nav ul li:not(:last-child) {
   word-spacing: 4px;
 }
 .home #part-two #part-two-1 div #zx9-btn {
-  padding: 0.9em 3em;
+  padding: 0.7em 2.5em;
   font-size: 1em;
   font-weight: 600;
   background-color: black;
   color: white;
+  text-transform: uppercase;
   transition: background-color ease 0.7s;
+  cursor: pointer;
 }
 .home #part-two #part-two-1 div #zx9-btn:hover {
   background-color: white;
@@ -199,35 +229,6 @@ nav ul li:not(:last-child) {
   background-color: var(--very-light-gray);
   place-items: center;
   place-content: center;
-}
-.home #part-three {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-.home #part-three img, .home #part-three div {
-  width: 45%;
-}
-.home #part-three img {
-  border-radius: 20px;
-}
-.home #part-three div {
-  margin-top: 10em;
-}
-.home #part-three div h1 {
-  font-size: 2.8em;
-  font-weight: 600;
-  line-height: 1;
-}
-.home #part-three div h1 span {
-  color: var(--orange);
-}
-.home #part-three div p {
-  font-size: 1em;
-  font-weight: 300;
-  color: var(--nav-border);
-  margin-top: 3em;
-  line-height: 1.6;
 }
 
 .categories {
@@ -268,13 +269,239 @@ nav ul li:not(:last-child) {
   margin-left: 10px;
 }
 
+.products-page > .container .product-presentation div {
+  width: 40%;
+  margin-top: 6em;
+}
+.products-page > .container .product-presentation div h1 {
+  font-size: 2.2em;
+  font-weight: 600;
+  line-height: 1.2;
+}
+.products-page > .container .product-presentation div h1:first-of-type {
+  margin-top: 0.5em;
+}
+.products-page > .container .product-presentation div h1:last-of-type {
+  margin-bottom: 1em;
+}
+
+.products-page {
+  color: var(--txt-black);
+}
+.products-page header {
+  background-color: var(--black-bg);
+  height: 12em;
+  display: flex;
+  font-size: 1.5em;
+  font-weight: 500;
+  text-align: center;
+  place-items: center;
+  color: white;
+  letter-spacing: 3px;
+  margin-bottom: 3em;
+}
+.products-page > .container {
+  display: grid;
+  gap: 8em;
+}
+.products-page > .container .product-presentation {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.products-page > .container .product-presentation:nth-child(even) {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+}
+.products-page > .container .product-presentation img {
+  width: 50%;
+  border-radius: 1em;
+}
+.products-page > .container .product-presentation div p {
+  margin-bottom: 4em;
+}
+.products-page .categories {
+  margin: 2em 0;
+}
+
+.product-details .intro .add-product {
+  width: 40%;
+  margin-top: 6em;
+}
+.product-details .intro .add-product h1 {
+  font-size: 2.2em;
+  font-weight: 600;
+  line-height: 1.2;
+}
+.product-details .intro .add-product h1:first-of-type {
+  margin-top: 0.5em;
+}
+.product-details .intro .add-product h1:last-of-type {
+  margin-bottom: 1em;
+}
+
+.product-details {
+  padding: 2em 0;
+}
+.product-details img {
+  border-radius: 12px;
+}
+.product-details .go-back {
+  font-size: 1.3em;
+  font-weight: 300;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.product-details .go-back:hover {
+  text-decoration: underline;
+}
+.product-details .intro {
+  margin: 2em 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.product-details .intro img {
+  width: 50%;
+}
+.product-details .intro .add-product p {
+  margin-bottom: 3em;
+}
+.product-details .intro .add-product .price {
+  font-size: 1.3em;
+  font-weight: 700;
+}
+.product-details .intro .add-product > div {
+  display: flex;
+  flex-direction: row;
+  justify-content: baseline;
+  margin-top: 2em;
+}
+.product-details .intro .add-product > div .control {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: var(--very-light-gray);
+  margin-right: 2em;
+}
+.product-details .intro .add-product > div .control span {
+  padding: 0.6em 0.7em;
+}
+.product-details .intro .add-product > div .control span:not(:nth-child(2)) {
+  cursor: pointer;
+  transition: background-color 0.4s ease;
+  font-weight: 500;
+  padding-right: 1em;
+  padding-left: 1em;
+}
+.product-details .intro .add-product > div .control span:not(:nth-child(2)):hover {
+  background-color: var(--light-gray);
+  color: var(--orange);
+}
+.product-details .features-inbox {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 10em 0;
+}
+.product-details .features-inbox h1 {
+  margin-bottom: 1.5em;
+}
+.product-details .features-inbox .features {
+  width: 60%;
+}
+.product-details .features-inbox .in-box {
+  width: 30%;
+}
+.product-details .features-inbox .in-box li {
+  color: var(--nav-border);
+  margin-bottom: 1em;
+}
+.product-details .features-inbox .in-box li span {
+  color: var(--orange);
+  margin-right: 1.5em;
+  font-weight: 600;
+}
+.product-details .gallery {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.product-details .gallery div {
+  width: 41%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.product-details .gallery > img {
+  width: 57%;
+}
+.product-details .others {
+  margin-top: 8em;
+  text-align: center;
+}
+.product-details .others .suggestions {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 3em;
+}
+.product-details .others .suggestions .sugg-item {
+  width: 32%;
+  text-align: center;
+}
+.product-details .others .suggestions .sugg-item img {
+  width: 100%;
+}
+.product-details .others .suggestions .sugg-item h1 {
+  margin: 1.3em 0;
+}
+
+#best-gear {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+#best-gear img, #best-gear div {
+  width: 45%;
+}
+#best-gear img {
+  border-radius: 20px;
+}
+#best-gear div {
+  margin-top: 10em;
+}
+#best-gear div h1 {
+  font-size: 2.8em;
+  font-weight: 600;
+  line-height: 1;
+}
+#best-gear div h1 span {
+  color: var(--orange);
+}
+#best-gear div p {
+  font-size: 1em;
+  font-weight: 300;
+  color: var(--nav-border);
+  margin-top: 3em;
+  line-height: 1.6;
+}
+
 footer {
   background-color: var(--black-bg);
   margin-top: 12em;
 }
 footer nav .container {
-  padding-top: 4.5em;
+  padding: 0;
   border-bottom: none;
+}
+footer nav .container > img {
+  padding-top: 4.4em;
+  border-top: 5px solid var(--orange);
+}
+footer nav .container ul {
+  padding-top: 4.4em;
 }
 footer .container div {
   display: flex;

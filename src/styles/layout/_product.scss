@@ -1,0 +1,108 @@
+@import './../helpers/mixins';
+@import './../helpers/place_holders';
+.product-details{
+    padding:2em 0;
+    img{
+     border-radius: 12px;           
+    }
+    .go-back{
+        @include font-param(1.3em,300);
+        text-transform: uppercase;
+        cursor: pointer;
+        &:hover{
+            text-decoration: underline;
+        }
+    }
+    .intro{
+        margin: 2em 0;
+        @include flex;
+        img{
+            width:50%;
+        }
+        .add-product{
+            @extend %product-intro;
+            p{
+                margin-bottom: 3em
+            }
+            .price{
+                @include font-param(1.3em,700)
+            }
+            >div{
+                @include flex(row,baseline);
+                margin-top: 2em;
+                .control{
+                    @include flex;
+                    background-color: var(--very-light-gray);
+                    margin-right: 2em;
+                    span{
+                        padding: 0.6em .7em;
+                        &:not(:nth-child(2)){
+                            cursor: pointer;
+                            transition: background-color 0.4s ease;
+                            font-weight: 500;
+                            padding: {
+                                right:1em;
+                                left:1em;
+                            }
+                            &:hover{
+                                background-color: var(--light-gray);
+                                color:var(--orange)
+                            } 
+
+                        }
+                    }
+                }
+            }
+        }   
+    }
+    .features-inbox{
+        @include flex;
+        margin: 10em 0;
+        h1{
+            margin-bottom: 1.5em;
+        }
+        .features{
+            width:60%;
+        }
+        .in-box{
+            width:30%;
+            li{
+                color:var(--nav-border);
+                margin-bottom: 1em;
+                span{
+                    color:var(--orange);
+                    margin-right:1.5em;
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+    .gallery{
+        @include flex;
+        div{
+            width:41%;
+            @include flex(column);
+        }
+        >img{
+            width:57%;
+        }
+    }
+    .others{
+        margin-top: 8em;
+        text-align: center;
+        .suggestions {
+            @include flex;
+            margin-top: 3em;
+            .sugg-item{
+                width:32%;
+                text-align: center;
+                img{
+                    width:100%;
+                }
+                h1{
+                    margin:1.3em 0;
+                }
+            }
+        }
+    }
+}

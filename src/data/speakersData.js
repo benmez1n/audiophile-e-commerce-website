@@ -1,8 +1,10 @@
 let speakers = []
 export default speakers  = [
+    "SPEAKERS",
     {
         id:1 ,
-        link:"/speakers/zx9-speaker",
+        link:"/speakers/1",
+        img:"images/product-zx9-speaker/image-product.jpg",
         name:"ZX9 SPEAKER",
         new:true,
         descrption:"Upgrade your sound system with the all new ZX9 active speaker. It’s a bookshelf speaker system that offers truly wireless connectivity -- creating new possibilities for more pleasing and practical audio setups.",
@@ -32,31 +34,32 @@ export default speakers  = [
             }
         ],
         gallery : {
-            first : "images\product-zx9-speaker\image-gallery-1.jpg",
-            second : "images\product-zx9-speaker\image-gallery-2.jpg",
-            third :"images\product-zx9-speaker\image-gallery-3.jpg" 
+            first : "images/product-zx9-speaker/image-gallery-1.jpg",
+            second : "images/product-zx9-speaker/image-gallery-2.jpg",
+            third :"images/product-zx9-speaker/image-gallery-3.jpg" 
         },
         others : [
             {
-                link:"/speakers/zx7-speaker",
+                link:"/speakers/2",
                 name:"ZX7 SPEAKER",
-                image:"images/category/speakers/image-zx7.jpg",
+                image:"images/category-speakers/image-zx7.jpg",
             },
             {
-                link:"/headphones/xx99-mark-one",
+                link:"/headphones/2",
                 name:"XX99 MK I",
-                image:"images/category/headphones/image-xx99-mark-one.jpg",                
+                image:"images/category-headphones/image-xx99-mark-one.jpg",                
             },
             {                    
-                link:"/headphones/xx59",
+                link:"/headphones/3",
                 name:"XX59",
-                image:"images/category/headphones/image-xx59.jpg",                
+                image:"images/category-headphones/image-xx59.jpg",                
             },
         ]
     },
     {
         id:2 ,
-        link:"/speakers/zx7-speaker",
+        img:"images/product-zx7-speaker/image-product.jpg",
+        link:"/speakers/2",
         name:"ZX7 SPEAKER",
         new:false,
         descrption:"Stream high quality sound wirelessly with minimal to no loss. The ZX7 speaker uses high-end audiophile components that represents the top of the line powered speakers for home or studio use.",
@@ -86,25 +89,25 @@ export default speakers  = [
             }
         ],
         gallery : {
-            first : "images\product-zx7-speaker\image-gallery-1.jpg",
-            second : "images\product-zx7-speaker\image-gallery-2.jpg",
-            third :"images\product-zx7-speaker\image-gallery-3.jpg" 
+            first : "images/product-zx7-speaker/image-gallery-1.jpg",
+            second : "images/product-zx7-speaker/image-gallery-2.jpg",
+            third :"images/product-zx7-speaker/image-gallery-3.jpg" 
         },
         others : [
             {
-                link:"/speakers/zx9-speaker",
+                link:"/speakers/1",
                 name:"ZX9 SPEAKER",
-                image:"images/category/speakers/image-zx9.jpg",
+                image:"images/category-speakers/image-zx9.jpg",
             },
             {
-                link:"/headphones/xx99-mark-one",
+                link:"/headphones/2",
                 name:"XX99 MK I",
-                image:"images/category/headphones/image-xx99-mark-one.jpg",                
+                image:"images/category-headphones/image-xx99-mark-one.jpg",                
             },
             {                    
-                link:"/headphones/xx59",
+                link:"/headphones/3",
                 name:"XX59",
-                image:"images/category/headphones/image-xx59.jpg",                
+                image:"images/category-headphones/image-xx59.jpg",                
             },
         ]
     }
