@@ -7,3 +7,33 @@
 @use './layout/product';
 @use './layout/best_gear';
 @use './layout/footer';
+@import './helpers/mixins';
+.see-product-btn{
+    @include product-btn(var(--orange),var(--very-light-orange),white,white)
+}
+.new{
+    @include font-param(1em,300);
+    letter-spacing: .6em;
+    color: var(--orange);
+}
+.alert{
+    display: none;
+    position: fixed;
+    z-index: 30;
+    border-radius: 18px;
+    top: 1em;
+    padding: 0.5em 1.5em;
+    color:white;
+    place-items: center;
+    span{
+        font-weight: 700;
+    }
+    p{
+        @include font-param(1em,600);
+        color:white;
+    }
+    background-color: var(--green);
+    &.show{
+        display:flex
+    }
+}

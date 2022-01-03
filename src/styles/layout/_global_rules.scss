@@ -17,6 +17,7 @@
     --very-light-gray:rgb(240, 240, 240);
     --txt-black:#181818;
     --light-gray:rgb(211, 209, 209);
+    --green:rgb(56, 161, 105);
 }
 .container{
     width:1170px;
@@ -33,11 +34,3 @@ p{
     line-height: 1.7;
 }
 h1{text-transform: uppercase}
-.see-product-btn{
-    @include product-btn(var(--orange),var(--very-light-orange),white,white)
-}
-.new{
-    @include font-param(1em,300);
-    letter-spacing: .6em;
-    color: var(--orange);
-}

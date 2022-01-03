@@ -12,7 +12,7 @@ import headphones from "../data/headphonesData";
 import speakers from "../data/speakersData";
 
 const ProductPage = () => {
-    const {toTop,handleIncrease,handleDecrease,addToCart} = useGlobalContext()
+    const {toTop,addToCart} = useGlobalContext()
 
     const param = useParams()
     const id = Number(param.productId)
@@ -25,6 +25,15 @@ const ProductPage = () => {
 
     const handleBack = () => {
         history.goBack();
+    }
+
+    // INCREASE/DECREASE ITEM
+    const handleIncrease = (value) => {
+        return value + 1
+    }
+    const handleDecrease = (value) => {
+        if(value === 1 ) return 1
+        return value - 1
     }
 
     useEffect(
@@ -66,7 +75,7 @@ const ProductPage = () => {
                                 <div>
                                     <div className="control">
                                         <span onClick={()=>setCount(handleDecrease(count))}>-</span>
-                                        <span >{count}</span>
+                                        <span id="count">{count}</span>
                                         <span onClick={()=> setCount(handleIncrease(count))}>+</span>
                                     </div>
                                     <div 
@@ -76,7 +85,8 @@ const ProductPage = () => {
                                                 data[id].img,
                                                 data[id].name,
                                                 data[id].price,
-                                                count
+                                                count,
+                                                setCount
                                             )
                                             }
                                         }
@@ -122,19 +132,10 @@ const ProductPage = () => {
                                 data[id].others.map(
                                     (item,index) => {
                                         return(
-                                            <div className="sugg-item" 
+                                            <div className="sugg-item" data-aos="zoom-in" data-aos-duration="2000"
                                                 key={index}>
-                                                <img 
-                                                    src={`../${item.image}`} alt=""
-                                                    data-aos="zoom-in" data-aos-duration="3000"
-                                                    data-aos-easing="linear"
-                                                    data-aos-offset="300"
-                                                    />
-                                                <h1 data-aos="zoom-in" data-aos-duration="3000"
-                                                    data-aos-easing="linear"
-                                                    data-aos-offset="300">
-                                                        {item.name}
-                                                </h1>
+                                                <img src={`../${item.image}`} alt=""/>
+                                                <h1 >{item.name}</h1>
                                                 <Link onClick={toTop}
                                                         className="see-product-btn" 
                                                         to={item.link}>

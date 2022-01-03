@@ -17,6 +17,7 @@ import ProductPage from "./pages/ProductPage";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Cart from "./pages/Cart";
+import Alert from "./components/Alert";
 function App() {
 
   useEffect(() => {
@@ -29,6 +30,7 @@ function App() {
     <AppProvider>
       <Router>
         <div className="App">
+          <Alert/>
           <Navbar/>
           <Cart />
           <Switch>

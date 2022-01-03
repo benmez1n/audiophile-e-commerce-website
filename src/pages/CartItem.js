@@ -1,4 +1,10 @@
-const CartItem = ({img,name,price}) => {
+import { useState } from "react";
+import { useGlobalContext } from "../helpers/context";
+const CartItem = ({img,name,price,amount}) => {
+    const {increase , decrease} = useGlobalContext()
+
+    const [ itemAmount , setItemAmount ] = useState(amount)
+    
     return ( 
         <div className="cart-item">
         <div className="item">
@@ -9,9 +15,9 @@ const CartItem = ({img,name,price}) => {
             </div>
         </div>
         <div className="control">
-            <span>-</span>
-            <span>1</span>
-            <span>+</span>
+            <span onClick={()=>decrease(name)}>-</span>
+            <span>{amount}</span>
+            <span onClick={()=>increase(name)}>+</span>
         </div>
     </div>  
      );

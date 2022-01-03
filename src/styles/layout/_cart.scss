@@ -8,14 +8,15 @@
     width:100%;
     height: 100%;
     z-index: 20;
+    
     &.display{
         display: block;
     }
     .cart{
         position: fixed;
-        right:4em;
-        top:6em;
-        width:30em;
+        right:6em;
+        top:4.4em;
+        width:24em;
         border-radius: 16px;
         padding:.5em 2em 2em;
         margin-top: .5em;
@@ -30,16 +31,26 @@
                 top:.5em;
                 bottom:2em;
             }
+            >span{
+                @include font-param(1em,300);
+                text-transform: uppercase;
+                cursor: pointer;
+                &:hover{
+                    text-decoration: underline
+                }
+            }
         }
         .cart-item{
             @include flex;
             place-items: center;
+            margin-bottom: 1em;
             .item{
                 @include flex;
-                place-items: center;
+                text-align: left;
                 img{
                     width:3em;
-                    margin-right: 2em
+                    margin-right: .7em;
+                    border-radius: 5px;
                 }
             }
             .control{
@@ -53,6 +64,16 @@
         .total{
             @include flex;
             margin: 1.5em 0 2.5em; 
+        }
+        .empty{
+            h1{
+                @include font-param(1.2em,500);
+                color:var(--dark-grey)
+            }
+            img{
+                width:5em;
+                margin-top: 2em;
+            }
         }
     }
 }
