@@ -31,24 +31,15 @@
                 @include flex(row,baseline);
                 margin-top: 2em;
                 .control{
-                    @include flex;
-                    background-color: var(--very-light-gray);
+                    @extend %control;
                     margin-right: 2em;
                     span{
                         padding: 0.6em .7em;
-                        &:not(:nth-child(2)){
-                            cursor: pointer;
-                            transition: background-color 0.4s ease;
-                            font-weight: 500;
-                            padding: {
-                                right:1em;
-                                left:1em;
+                        &:nth-child(2){
+                            padding : {
+                                left:0.8em;
+                                right:0.8em
                             }
-                            &:hover{
-                                background-color: var(--light-gray);
-                                color:var(--orange)
-                            } 
-
                         }
                     }
                 }

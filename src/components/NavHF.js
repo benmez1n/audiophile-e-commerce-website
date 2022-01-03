@@ -1,12 +1,7 @@
 import { Link } from "react-router-dom";
-const NavHF = () => {
-    const toTop = () => {
-        window.scrollTo({
-          top:0,
-          behavior : "smooth"
-        })
-      }
-    
+import { useGlobalContext } from "../helpers/context";
+const NavHF = () => {   
+    const {toTop} = useGlobalContext()
     return ( 
         <>
             <img src="../images/shared/logo.svg" alt="logo"/>

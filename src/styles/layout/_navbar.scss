@@ -23,5 +23,22 @@ nav{
          }
       }
    }
-
+   .nav-cart{
+      position: relative;
+      span{
+         position: absolute;
+         width:1.2em;
+         height: 1.3em;
+         top:-0.5em;
+         right:-0.5em;
+         text-align: center;
+         color:white;
+         font-size: 0.9em;
+         border-radius: 50%;
+         background-color: var(--orange);
+      }
+   }
+   img[alt="cart"]{
+      cursor: pointer;
+   }
 }

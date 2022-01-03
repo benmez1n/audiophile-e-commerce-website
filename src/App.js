@@ -5,6 +5,8 @@ import {
  } from "react-router-dom";
 import { useEffect } from "react";
 
+import { AppProvider } from "./helpers/context";
+
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 
@@ -14,13 +16,9 @@ import ProductPage from "./pages/ProductPage";
 
 import AOS from "aos";
 import "aos/dist/aos.css";
+import Cart from "./pages/Cart";
 function App() {
-  const toTop = () => {
-    window.scrollTo({
-      top:0,
-      behavior : "smooth"
-    })
-  }
+
   useEffect(() => {
     AOS.init();
     AOS.refresh();
@@ -28,19 +26,22 @@ function App() {
 
 
   return (
-    <Router>
-      <div className="App">
-        <Navbar toTop={toTop}/>
-        <Switch>
-          <Route exact path="/" >
-            <Home toTop={toTop}/>
-          </Route>
-          <Route exact path="/:category" children={<CategoryPage toTop={toTop}/>} /> 
-          <Route path="/:category/:productId" children={<ProductPage toTop={toTop}/>} /> 
-        </Switch>
-        <Footer/>
-      </div>
-    </Router>
+    <AppProvider>
+      <Router>
+        <div className="App">
+          <Navbar/>
+          <Cart />
+          <Switch>
+            <Route exact path="/" >
+              <Home/>
+            </Route>
+            <Route exact path="/:category" children={<CategoryPage/>} /> 
+            <Route path="/:category/:productId" children={<ProductPage/>} /> 
+          </Switch>
+          <Footer/>
+        </div>
+      </Router>
+    </AppProvider>
   );
 }
 

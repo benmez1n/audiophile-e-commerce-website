@@ -1,30 +1,24 @@
 import { Link } from "react-router-dom";
-
+import { useGlobalContext } from "../helpers/context";
 const Categories = () => {
-    const toTop = () => {
-        window.scrollTo({
-          top:0,
-          behavior : "smooth"
-        })
-      }
-    
+    const {toTop} = useGlobalContext()
     return ( 
-        <div className="categories" data-aos="zoom-in" data-aos-duration="3000" >
-            <div>
+        <div className="categories">
+            <div data-aos="zoom-in" data-aos-duration="3000" >
                 <img src="../images/shared/image-headphones.png" alt="category-img"/>
                 <h1>headphones</h1>
                 <Link onClick={toTop}
                     className="to-shop-btn" 
                     to="/headphones">shop<img src="../images/shared/icon-arrow-right.svg" alt=""/></Link>
             </div>
-            <div>
+            <div data-aos="zoom-in" data-aos-duration="3000" >
                 <img src="../images/shared/image-speakers.png" alt="category-img"/>
                 <h1>speakers</h1>
                 <Link onClick={toTop}
                     className="to-shop-btn" 
                     to="/speakers">shop<img src="../images/shared/icon-arrow-right.svg" alt=""/></Link>
             </div>
-            <div>
+            <div data-aos="zoom-in" data-aos-duration="3000" >
                 <img src="../images/shared/image-earphones.png" alt="category-img"/>
                 <h1>earphones</h1>
                 <Link onClick={toTop}

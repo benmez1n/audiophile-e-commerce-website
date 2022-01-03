@@ -12,3 +12,23 @@
         }
     }
 }
+%control{
+    @include flex;
+    background-color: var(--very-light-gray);
+    span{
+        &:not(:nth-child(2)){
+            cursor: pointer;
+            transition: background-color 0.4s ease;
+            font-weight: 500;
+            padding: {
+                right:1em;
+                left:1em;
+            }
+            &:hover{
+                background-color: var(--light-gray);
+                color:var(--orange)
+            } 
+
+        }
+    }
+}

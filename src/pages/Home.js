@@ -1,12 +1,14 @@
 import { Link } from "react-router-dom";
 
+import { useGlobalContext } from "../helpers/context";
+
 import BestGear from "../components/BestGear";
 import Categories from "../components/Categories";
 
 import headphones from "../data/headphonesData"
 
-const Home = ({toTop}) => {
-  
+const Home = () => {
+  const {toTop} = useGlobalContext()
     return ( 
         <main className="home">
             <section id="part-one" >
@@ -45,9 +47,13 @@ const Home = ({toTop}) => {
                         id="zx7-btn">see product</Link>
                   </div>
                 </div>
-                <div id="part-two-3" data-aos="zoom-in" data-aos-duration="3000">
-                    <img src="images/home/image-earphones-yx1.jpg" alt=""/>
-                    <div>
+                <div id="part-two-3" >
+                    <img 
+                        src="images/home/image-earphones-yx1.jpg" 
+                        alt="" 
+                        data-aos="zoom-in" data-aos-duration="3000"
+                        />
+                    <div data-aos="zoom-in" data-aos-duration="3000">
                       <h1>YX1 EARPHONES</h1>
                       <Link onClick={toTop} 
                           to="/earphones/1" 

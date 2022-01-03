@@ -91,6 +91,109 @@ nav ul li a:hover {
 nav ul li:not(:last-child) {
   margin-right: 3.5em;
 }
+nav .nav-cart {
+  position: relative;
+}
+nav .nav-cart span {
+  position: absolute;
+  width: 1.2em;
+  height: 1.3em;
+  top: -0.5em;
+  right: -0.5em;
+  text-align: center;
+  color: white;
+  font-size: 0.9em;
+  border-radius: 50%;
+  background-color: var(--orange);
+}
+nav img[alt=cart] {
+  cursor: pointer;
+}
+
+.cart-container .cart .cart-item .control {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: var(--very-light-gray);
+}
+.cart-container .cart .cart-item .control span:not(:nth-child(2)) {
+  cursor: pointer;
+  transition: background-color 0.4s ease;
+  font-weight: 500;
+  padding-right: 1em;
+  padding-left: 1em;
+}
+.cart-container .cart .cart-item .control span:not(:nth-child(2)):hover {
+  background-color: var(--light-gray);
+  color: var(--orange);
+}
+
+.cart-container {
+  display: none;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.4);
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 20;
+}
+.cart-container.display {
+  display: block;
+}
+.cart-container .cart {
+  position: fixed;
+  right: 4em;
+  top: 6em;
+  width: 30em;
+  border-radius: 16px;
+  padding: 0.5em 2em 2em;
+  margin-top: 0.5em;
+  height: max-content;
+  text-align: center;
+  background-color: white;
+}
+.cart-container .cart .close {
+  text-align: right;
+  cursor: pointer;
+}
+.cart-container .cart .header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 0.5em;
+  margin-bottom: 2em;
+}
+.cart-container .cart .header h1 {
+  font-size: 1.2em;
+}
+.cart-container .cart .cart-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  place-items: center;
+}
+.cart-container .cart .cart-item .item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  place-items: center;
+}
+.cart-container .cart .cart-item .item img {
+  width: 3em;
+  margin-right: 2em;
+}
+.cart-container .cart .cart-item .control {
+  height: max-content;
+}
+.cart-container .cart .cart-item .control span {
+  padding: 0.3em 0.7em;
+}
+.cart-container .cart .total {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 1.5em 0 2.5em;
+}
 
 .home #part-one {
   padding: 2em 0;
@@ -341,6 +444,24 @@ nav ul li:not(:last-child) {
   margin-bottom: 1em;
 }
 
+.product-details .intro .add-product > div .control {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: var(--very-light-gray);
+}
+.product-details .intro .add-product > div .control span:not(:nth-child(2)) {
+  cursor: pointer;
+  transition: background-color 0.4s ease;
+  font-weight: 500;
+  padding-right: 1em;
+  padding-left: 1em;
+}
+.product-details .intro .add-product > div .control span:not(:nth-child(2)):hover {
+  background-color: var(--light-gray);
+  color: var(--orange);
+}
+
 .product-details {
   padding: 2em 0;
 }
@@ -379,25 +500,14 @@ nav ul li:not(:last-child) {
   margin-top: 2em;
 }
 .product-details .intro .add-product > div .control {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  background-color: var(--very-light-gray);
   margin-right: 2em;
 }
 .product-details .intro .add-product > div .control span {
   padding: 0.6em 0.7em;
 }
-.product-details .intro .add-product > div .control span:not(:nth-child(2)) {
-  cursor: pointer;
-  transition: background-color 0.4s ease;
-  font-weight: 500;
-  padding-right: 1em;
-  padding-left: 1em;
-}
-.product-details .intro .add-product > div .control span:not(:nth-child(2)):hover {
-  background-color: var(--light-gray);
-  color: var(--orange);
+.product-details .intro .add-product > div .control span:nth-child(2) {
+  padding-left: 0.8em;
+  padding-right: 0.8em;
 }
 .product-details .features-inbox {
   display: flex;

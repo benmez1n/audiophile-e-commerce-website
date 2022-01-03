@@ -1,6 +1,8 @@
 import { useState , useEffect } from 'react';
 import { Link, useParams } from 'react-router-dom';
 
+import { useGlobalContext } from '../helpers/context';
+
 import Categories from '../components/Categories';
 import BestGear from '../components/BestGear';
 
@@ -11,8 +13,9 @@ import speakers from '../data/speakersData'
 
 
 
-const ProductsMainPage = ({toTop}) => {
-    
+const ProductsMainPage = () => {
+    const {toTop} = useGlobalContext()
+
     const param = useParams();
     const categoryParam = param.category
     const [data, setData] = useState([]) 
