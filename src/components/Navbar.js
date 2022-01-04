@@ -12,7 +12,7 @@ const Navbar = () => {
             <div className="container">
                 <NavHF/>
                 <div className="nav-cart">
-                    {amount && <span>{amount}</span>}
+                    {amount>0 && <span>{amount}</span>}
                     <img 
                         src = "../images/shared/icon-cart.svg" 
                         alt="cart"

@@ -6,15 +6,13 @@
 @use './layout/category_page';
 @use './layout/product';
 @use './layout/best_gear';
+@use './layout/checkout';
 @use './layout/footer';
 @import './helpers/mixins';
-.see-product-btn{
-    @include product-btn(var(--orange),var(--very-light-orange),white,white)
-}
-.new{
-    @include font-param(1em,300);
-    letter-spacing: .6em;
-    color: var(--orange);
+@import './helpers/place_holders';
+
+body{
+    @extend %scrollBar
 }
 .alert{
     display: none;
@@ -25,6 +23,11 @@
     padding: 0.5em 1.5em;
     color:white;
     place-items: center;
+    img{
+        width:2em;
+        height: 2em;
+        margin-right:.4em ;
+    }
     span{
         font-weight: 700;
     }
@@ -35,5 +38,26 @@
     background-color: var(--green);
     &.show{
         display:flex
+    }
+}
+.see-product-btn{
+    @include product-btn(var(--orange),var(--very-light-orange),white,white);
+    &.disable{
+        cursor:no-drop;
+        user-select:none;
+        background-color: var(--very-light-orange)
+    }
+}
+.new{
+    @include font-param(1em,300);
+    letter-spacing: .6em;
+    color: var(--orange);
+}
+.go-back{
+    @include font-param(1.3em,300);
+    text-transform: uppercase;
+    cursor: pointer;
+    &:hover{
+        text-decoration: underline;
     }
 }

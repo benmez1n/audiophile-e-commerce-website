@@ -9,15 +9,17 @@ import { AppProvider } from "./helpers/context";
 
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import Alert from "./components/Alert";
 
 import Home from "./pages/Home";
 import CategoryPage from "./pages/CategoryPage";
 import ProductPage from "./pages/ProductPage";
+import Cart from "./pages/Cart";
+import Checkout from "./pages/Checkout"
 
 import AOS from "aos";
 import "aos/dist/aos.css";
-import Cart from "./pages/Cart";
-import Alert from "./components/Alert";
+
 function App() {
 
   useEffect(() => {
@@ -37,8 +39,9 @@ function App() {
             <Route exact path="/" >
               <Home/>
             </Route>
+            <Route exact path="/checkout" children={<Checkout/>}/>
             <Route exact path="/:category" children={<CategoryPage/>} /> 
-            <Route path="/:category/:productId" children={<ProductPage/>} /> 
+            <Route exact path="/:category/:productId" children={<ProductPage/>} /> 
           </Switch>
           <Footer/>
         </div>

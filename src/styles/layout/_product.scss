@@ -5,14 +5,6 @@
     img{
      border-radius: 12px;           
     }
-    .go-back{
-        @include font-param(1.3em,300);
-        text-transform: uppercase;
-        cursor: pointer;
-        &:hover{
-            text-decoration: underline;
-        }
-    }
     .intro{
         margin: 2em 0;
         @include flex;

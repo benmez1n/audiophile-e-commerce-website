@@ -12,12 +12,13 @@
     --orange: #d77033;
     --very-light-orange: #e4986d;
     --light-orange:#dd7f48;
-    --nav-border:rgb(139, 139, 139);
-    --dark-grey:rgb(127, 127, 127);
-    --very-light-gray:rgb(240, 240, 240);
+    --nav-border:#8b8b8b;
+    --dark-grey:#7f7f7f;
+    --very-light-gray:#f0f0f0;
     --txt-black:#181818;
-    --light-gray:rgb(211, 209, 209);
-    --green:rgb(56, 161, 105);
+    --light-gray:#d3d1d1;
+    --hard-light-gray:#f7f7f7;
+    --green:#38a169;
 }
 .container{
     width:1170px;
@@ -34,3 +35,7 @@ p{
     line-height: 1.7;
 }
 h1{text-transform: uppercase}
+input{
+    outline:none;
+    border: none;
+}

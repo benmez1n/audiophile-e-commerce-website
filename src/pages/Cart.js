@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { useState, useEffect, useRef } from "react";
+import { useRef } from "react";
 import { useGlobalContext } from "../helpers/context";
 import CartItem from "./CartItem";
 
@@ -60,7 +60,13 @@ const Cart = () => {
                         <p>TOTAL</p>
                         <span>${total}</span>
                     </div>
-                    <Link className="see-product-btn">checkout</Link>
+                    <Link 
+                        to="/checkout" 
+                        className="see-product-btn"
+                        onClick={cartCloseHandler}
+                        >
+                        checkout
+                    </Link>
                 </div>
             </div>
         );

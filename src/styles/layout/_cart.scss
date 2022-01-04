@@ -20,9 +20,12 @@
         border-radius: 16px;
         padding:.5em 2em 2em;
         margin-top: .5em;
-        height: max-content;
+        height: 25em;
+        max-height: 40em;
+        overflow-y: scroll;
         text-align: center;
         background-color: white;
+        @extend %scrollBar;
         .close{text-align: right;cursor: pointer}
         .header{
             @include flex;
@@ -45,13 +48,7 @@
             place-items: center;
             margin-bottom: 1em;
             .item{
-                @include flex;
-                text-align: left;
-                img{
-                    width:3em;
-                    margin-right: .7em;
-                    border-radius: 5px;
-                }
+                @extend %item;
             }
             .control{
                 @extend %control;

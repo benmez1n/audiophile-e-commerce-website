@@ -1,4 +1,4 @@
-import React , {useContext, useReducer, useState} from "react"
+import React , {useContext, useReducer } from "react"
 import {reducer as reducer} from "./reducer";
 const AppContext = React.createContext();
 
@@ -9,15 +9,15 @@ const init = {
 }
 
 const AppProvider = ({children}) => {
+    
     const [ state , dispatch ] = useReducer(reducer,init)
- 
-
+    
     //ALERT 
     const alert = (text,msg) => {
         const alert = document.querySelector(".alert")
-        const paragraph = document.querySelector(".alert p:last-child")
+        const paragraph = document.querySelector(".alert p:last-of-type")
         alert.classList.add("show")
-        document.querySelector(".alert p:first-child").textContent = text 
+        document.querySelector(".alert p:first-of-type").textContent = text 
         if(msg) {
             document.querySelector(".alert span").textContent = msg
             paragraph.textContent = "' was added to cart"
@@ -30,9 +30,9 @@ const AppProvider = ({children}) => {
             alert.classList.remove("show") 
         }, 2000);
     }
-
-    //UseReducer functions 
-
+    
+    //Reducer functions 
+    
     const addToCart = (img,productName,price,amount,setCount) => {
         dispatch({type:"ADD_TO_CART",payload:{img:`../${img}`,productName,price,amount}})
         alert("Item '",productName)
@@ -47,11 +47,18 @@ const AppProvider = ({children}) => {
     const increase = (productName) => {
         dispatch({type:"INCREASE",payload:{productName}});
     }
-
+    
     const decrease = (productName) => {
         dispatch({type:"DECREASE",payload:{productName}});
     }
 
+    const handleEndPay = ()=>{
+        document.querySelector(".order-bg").classList.remove("show")
+        document.querySelector(".order").classList.remove("show")
+        document.querySelector(".order-container").classList.remove("show")
+        dispatch({type:"REMOVE_ALL"})
+    }
+    
     //Scroll to TOP 
     const toTop = () => {
         window.scrollTo({
@@ -59,6 +66,13 @@ const AppProvider = ({children}) => {
             behavior : "smooth"
         })
     }
+
+    //function to add commas in numbers, example: 2222.8 => 2,222.8 
+    const numberWithCommas = ( number => {
+        return number
+                .toString()
+                .replace(/\B(?=(\d{3})+(?!\d))/g,",");
+    })
 
     return (
           <AppContext.Provider value={
@@ -69,6 +83,8 @@ const AppProvider = ({children}) => {
                     clearCart,
                     increase,
                     decrease,
+                    handleEndPay,
+                    numberWithCommas
                     }
                 }
             >

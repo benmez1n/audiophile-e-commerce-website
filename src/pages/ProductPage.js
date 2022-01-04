@@ -12,7 +12,7 @@ import headphones from "../data/headphonesData";
 import speakers from "../data/speakersData";
 
 const ProductPage = () => {
-    const {toTop,addToCart} = useGlobalContext()
+    const {toTop,addToCart,numberWithCommas} = useGlobalContext()
 
     const param = useParams()
     const id = Number(param.productId)
@@ -71,7 +71,7 @@ const ProductPage = () => {
                                 <h1>{data[id].name}</h1>
                                 <h1>{data[0]}</h1>
                                 <p>{data[id].descrption}</p>
-                                <span className="price">{`$${data[id].price}`}</span>
+                                <span className="price">{`$ ${numberWithCommas(data[id].price)}`}</span>
                                 <div>
                                     <div className="control">
                                         <span onClick={()=>setCount(handleDecrease(count))}>-</span>

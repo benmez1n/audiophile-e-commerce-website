@@ -2,6 +2,7 @@
 #best-gear{
     @include flex;
     img,div{width:45%}
+    padding-bottom: 12em;
     img{border-radius: 20px;}
     div{
         margin-top: 10em;

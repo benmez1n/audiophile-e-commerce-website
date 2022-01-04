@@ -1,9 +1,6 @@
-import { useState } from "react";
 import { useGlobalContext } from "../helpers/context";
 const CartItem = ({img,name,price,amount}) => {
-    const {increase , decrease} = useGlobalContext()
-
-    const [ itemAmount , setItemAmount ] = useState(amount)
+    const {increase , decrease,numberWithCommas} = useGlobalContext()
     
     return ( 
         <div className="cart-item">
@@ -11,7 +8,7 @@ const CartItem = ({img,name,price,amount}) => {
             <img src={img} alt=""/>
             <div className="price-name">
                 <h4>{name}</h4>
-                <p>{`$${price}`}</p>
+                <p>{`$ ${numberWithCommas(price)}`}</p>
             </div>
         </div>
         <div className="control">

@@ -1,6 +1,3 @@
-const getTotal = (arr) => {
-  const totalPrice = 0;
-};
 export const reducer = (state, action) => {
   // ADD TO CART
   if (action.type === "ADD_TO_CART") {
@@ -34,42 +31,22 @@ export const reducer = (state, action) => {
         amount: totalAmount,
         total: totalPrice,
       };
-    } else if (isExist) {
+    } 
+    else if (isExist) {
+        const tempCart = state.cart.map(
+            (item) => {
+              if(item.name === productName){
+                return {...item,amount : item.amount + amount}
+              }
+              return item
+            }
+          )
       
-      const itemsAmount = 0;
-      const totalCount = 0;
-
-      const items = state.cart.filter(
-        (item) => item.name !== productName
-      );
-      
-      items.forEach((element) => {
-        totalCount += element.price;
-        itemsAmount += element.amount * element.price;
-      });
-
-      const totalPrice = state.cart.length
-            ? totalCount + amount * price
-            : amount * price;
-
-      const totalAmount = state.cart.length ? itemsAmount + amount : amount;
-
-      return {
-        ...state,
-        cart: [
-          ...items,
-          {
-            name: productName,
-            img,
-            price,
-            amount,
-          },
-        ],
-        amount: totalAmount,
-        total: totalPrice,
-      };
-    } else {
-      return { ...state };
+      return {...state,
+              cart:tempCart,
+              amount:state.amount+amount,
+              total: state.total + price*amount
+            }
     }
   } 
 
@@ -83,6 +60,7 @@ export const reducer = (state, action) => {
   // INCREASE
   else if (action.type === "INCREASE") {
     let totalIncrease
+
     let tempCart = state.cart.map((item) => {
       if (item.name === action.payload.productName) {
         totalIncrease = item.price
@@ -90,6 +68,7 @@ export const reducer = (state, action) => {
       }
       return item
     })
+
     return { ...state, 
             cart: tempCart ,
             amount : state.amount+1,
@@ -100,6 +79,7 @@ export const reducer = (state, action) => {
   // DECREASE
   else if (action.type === "DECREASE") {
     let totalDecrease = 0
+    
     let tempCart = state.cart.map((item) => {
       if (item.name === action.payload.productName) {
           totalDecrease = item.price
@@ -107,7 +87,8 @@ export const reducer = (state, action) => {
       }
       return item
     })
-    .filter(item=> item.amount !== 0)
+    .filter(item => item.amount !== 0)
+    
     return { ...state,
        cart: tempCart ,
        amount : state.amount - 1,
