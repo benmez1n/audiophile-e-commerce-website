@@ -26,6 +26,10 @@
         text-align: center;
         background-color: white;
         @extend %scrollBar;
+        @media (max-width:769px){
+            right:1em;
+            width:90%;
+        }
         .close{text-align: right;cursor: pointer}
         .header{
             @include flex;

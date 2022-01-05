@@ -107,31 +107,6 @@ nav ul li a:hover {
 nav ul li:not(:last-child) {
   margin-right: 3.5em;
 }
-nav .nav-cart {
-  position: relative;
-}
-nav .nav-cart span {
-  position: absolute;
-  width: 14px;
-  height: 14px;
-  top: 0;
-  left: 0;
-  transform: translate(80%, -50%);
-  text-align: center;
-  color: white;
-  font-size: 9px;
-  font-weight: 500;
-  border-radius: 50%;
-  background-color: var(--orange);
-}
-nav img[alt=cart] {
-  cursor: pointer;
-}
-@media (max-width: 769px) {
-  nav img[alt=logo] {
-    margin-left: 30%;
-  }
-}
 nav .mobile {
   z-index: 5;
   display: none;
@@ -182,6 +157,32 @@ nav .mobile .menu .categories {
   nav .mobile .container {
     width: 100%;
     border: none;
+  }
+}
+nav .nav-cart {
+  position: relative;
+  z-index: 8;
+}
+nav .nav-cart span {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  top: 0;
+  left: 0;
+  transform: translate(80%, -50%);
+  text-align: center;
+  color: white;
+  font-size: 9px;
+  font-weight: 500;
+  border-radius: 50%;
+  background-color: var(--orange);
+}
+nav img[alt=cart] {
+  cursor: pointer;
+}
+@media (max-width: 769px) {
+  nav img[alt=logo] {
+    margin-left: 30%;
   }
 }
 
@@ -261,6 +262,12 @@ body ::-webkit-scrollbar-thumb:hover, .cart-container .cart ::-webkit-scrollbar-
   overflow-y: scroll;
   text-align: center;
   background-color: white;
+}
+@media (max-width: 769px) {
+  .cart-container .cart {
+    right: 1em;
+    width: 90%;
+  }
 }
 .cart-container .cart .close {
   text-align: right;
@@ -1209,6 +1216,11 @@ body ::-webkit-scrollbar-thumb:hover, .order .order-container ::-webkit-scrollba
 }
 .order .order-container.show {
   display: grid;
+}
+@media (max-width: 769px) {
+  .order .order-container {
+    width: 90%;
+  }
 }
 .order .order-container a {
   width: 80%;
