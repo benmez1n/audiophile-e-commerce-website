@@ -7,18 +7,19 @@ import OrderComplete from "../components/OrderComplete";
 
 const Checkout = () => {
     const {cart , total ,numberWithCommas} = useGlobalContext()
-
+    document.title = "Audiophile | Checkout"
     const  [ checked,setChecked ] = useState(true)
     let vat = 0
     const history = useHistory()
     const handleBack = () => {
         history.goBack();
     }
-
+    
     const onSubmit = () => {
         document.querySelector(".order-bg").classList.add("show")
         document.querySelector(".order").classList.add("show")
         document.querySelector(".order-container").classList.add("show")
+        document.body.style.overflow = 'hidden';
     };
     const { register, handleSubmit , formState:{errors}} = useForm({
         criteriaMode : "all"   

@@ -23,6 +23,9 @@
 .container{
     width:1170px;
     margin:auto;
+    @media (max-width:769px){
+        width:90%;
+    }
 }
 a{
     text-decoration: none;

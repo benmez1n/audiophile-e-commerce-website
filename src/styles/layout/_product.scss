@@ -3,7 +3,7 @@
 .product-details{
     padding:2em 0;
     img{
-     border-radius: 12px;           
+        border-radius: 12px;           
     }
     .intro{
         margin: 2em 0;
@@ -22,9 +22,18 @@
             >div{
                 @include flex(row,baseline);
                 margin-top: 2em;
+                @media (max-width:769px){
+                    flex-direction: column;
+                }
                 .control{
                     @extend %control;
                     margin-right: 2em;
+                    @media (max-width:769px){
+                        margin: {
+                            right:0;
+                            bottom: 1.5em;
+                        }
+                    }
                     span{
                         padding: 0.6em .7em;
                         &:nth-child(2){
@@ -37,6 +46,10 @@
                 }
             }
         }   
+        @media (max-width:769px){
+            flex-direction: column;
+            img{width: 100%;}
+        }
     }
     .features-inbox{
         @include flex;
@@ -59,6 +72,14 @@
                 }
             }
         }
+        @media (max-width:769px){
+            flex-direction: column;
+            margin-top:4em;
+            text-align: center;
+            .features,
+            .in-box{width:100%;}
+            .in-box{margin-top: 3.4em}
+        }
     }
     .gallery{
         @include flex;
@@ -69,10 +90,21 @@
         >img{
             width:57%;
         }
+        @media (max-width:769px){
+            flex-direction: column;
+            div,
+            >img{
+                width: 100%;
+            }
+            img{margin-bottom: 1.5em;}
+        }
     }
     .others{
         margin-top: 8em;
         text-align: center;
+        @media (max-width:769px){
+            margin-top: 4em;
+        }
         .suggestions {
             @include flex;
             margin-top: 3em;
@@ -84,6 +116,13 @@
                 }
                 h1{
                     margin:1.3em 0;
+                }
+            }
+            @media (max-width:769px){
+                flex-direction: column;
+                .sugg-item{
+                    width:100%;
+                    margin-bottom: 3em;
                 }
             }
         }

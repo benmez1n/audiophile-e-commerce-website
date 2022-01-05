@@ -1,22 +1,45 @@
 @import './../helpers/mixins';
 footer{
     background-color: var(--black-bg);
+    text-align: center;
     nav{
         .container{
             padding:0;
             border-bottom: none;
+            flex-direction: column;
+            place-items: center;
             >img{
                 padding-top: 4.4em;
                 border-top: 5px solid var(--orange);
+                @media (max-width:769px){
+                    margin:0;
+                    width:fit-content;
+                }
             }
-            ul{padding-top: 4.4em}
+            ul{
+                padding-top: 4.4em;
+                @media (max-width:769px){
+                    padding-top: 3em;
+                    @include flex(column);
+                    li{
+                        margin: 1em 0 0;
+                    }
+                }
+            }
         }
     }
     .container div{
         @include flex;
         margin: 3em 0 2em;
+        place-items: center;
+        @media (max-width:769px){
+            flex-direction: column;
+        }
         p{
             width:47%;
+            @media (max-width:769px){
+                width: 100%;
+            }
         }
         ul{
             width:12%;
@@ -24,6 +47,9 @@ footer{
             margin-top: 4em;
             li:hover{
                 color:var(--orange)
+            }
+            @media (max-width:769px){
+                width:30%;                
             }
         }
     }

@@ -9,6 +9,7 @@ import headphones from "../data/headphonesData"
 
 const Home = () => {
   const {toTop} = useGlobalContext()
+  document.title = "Audiophile | Home"
     return ( 
         <main className="home">
             <section id="part-one" >

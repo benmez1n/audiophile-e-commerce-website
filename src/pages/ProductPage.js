@@ -18,6 +18,8 @@ const ProductPage = () => {
     const id = Number(param.productId)
     const category = param.category
     
+    document.title = `Audiophile | ${category[0].toUpperCase()}${category.slice(1,)}`
+    
     const history = useHistory()
     
     const [data, setData] = useState([])

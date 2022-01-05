@@ -1,11 +1,23 @@
 @import './../helpers/mixins';
 #best-gear{
     @include flex;
-    img,div{width:45%}
+    @media (max-width:769px){
+        text-align: center;
+        flex-direction: column-reverse;
+    }
+    img,div{
+        width:45%;
+        @media (max-width:769px){
+            width: 100%;
+        }
+    }
     padding-bottom: 12em;
     img{border-radius: 20px;}
     div{
         margin-top: 10em;
+        @media (max-width:769px){
+            margin-top: 2em;
+        }
         h1{
             @include font-param(2.8em,600);
             line-height: 1;

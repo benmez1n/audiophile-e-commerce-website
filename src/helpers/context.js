@@ -57,6 +57,7 @@ const AppProvider = ({children}) => {
         document.querySelector(".order").classList.remove("show")
         document.querySelector(".order-container").classList.remove("show")
         dispatch({type:"REMOVE_ALL"})
+        document.body.style.overflow = 'visible';
     }
     
     //Scroll to TOP 

@@ -20,6 +20,7 @@ const ProductsMainPage = () => {
     const categoryParam = param.category
     const [data, setData] = useState([]) 
 
+    document.title = `Audiophile | ${categoryParam[0].toUpperCase()}${categoryParam.slice(1,)}`
 
     useEffect(
         () => {

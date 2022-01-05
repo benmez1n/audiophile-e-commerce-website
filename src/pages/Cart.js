@@ -4,7 +4,7 @@ import { useGlobalContext } from "../helpers/context";
 import CartItem from "./CartItem";
 
 const Cart = () => {
-    const {cart,total,clearCart,amount} = useGlobalContext()
+    const {cart,total,clearCart,amount,numberWithCommas} = useGlobalContext()
     
     const cartRef = useRef();
 
@@ -58,7 +58,7 @@ const Cart = () => {
                     </div>
                     <div className="total">
                         <p>TOTAL</p>
-                        <span>${total}</span>
+                        <span>${numberWithCommas(total)}</span>
                     </div>
                     <Link 
                         to="/checkout" 

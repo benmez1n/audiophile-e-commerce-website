@@ -11,6 +11,11 @@
             margin-bottom: 1em;
         }
     }
+    @media (max-width:769px){
+        width: 100%;
+        text-align: center;
+        margin-top: 2em;
+    }
 }
 %control{
     @include flex;

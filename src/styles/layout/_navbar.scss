@@ -8,7 +8,10 @@ nav{
       justify-content: space-between;
    }
    ul{
-    display: flex;
+      display: flex;
+    @media (max-width:769px){
+       display: none;
+      }
       li{
          font-weight: 500;
          cursor: pointer;
@@ -42,5 +45,52 @@ nav{
    }
    img[alt="cart"]{
       cursor: pointer;
+   }
+   img[alt="logo"]{
+      @media (max-width:769px){
+         margin-left: 30%;
+      }
+   }
+   .mobile{
+      z-index: 5;
+      display: none;
+      position: absolute;
+      width: 100%;
+      .menu{
+         display: none;
+         &.show{display: flex;}
+         .categories{
+            background-color: white;
+            padding: 2em 0;
+            @media (max-width:769px){
+                margin: 3.5em 0 0;
+            }
+            div{
+                @media (max-width:767px){
+                    margin-bottom:1.5em;
+                }
+                img[alt="category-img"]{
+                    @media (max-width:769px){
+                        margin-top:-1em
+                    }
+                }
+            }
+         }
+      }
+      @media (max-width:769px){
+         @include flex(column);
+         .toggle{
+            position: relative;
+            left:5%;
+            .toggle-btn{
+               position: absolute;
+               &:last-child{display: none;}
+            }
+         }
+         .container{
+            width:100%;
+            border: none;
+         }
+      }
    }
 }

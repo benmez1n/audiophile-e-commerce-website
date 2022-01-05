@@ -9,12 +9,21 @@
             background-size: cover;
             background-position-y: -4em;
             background-position-x: 5em;
+            @media (max-width:769px){
+                background-position-y: -4em;
+                background-position-x: -25em;
+            }
             >div{
                 width:50%;
                 padding : {
                     top: 8em;
                     bottom: 5em;
                 }
+                @media (max-width:769px){
+                    width:90%;
+                    margin:0 auto;
+                    text-align: center;
+                 }
                 span{
                     letter-spacing: 10px;
                     color:var(--dark-grey);
@@ -25,6 +34,9 @@
                     &:first-child{
                         margin-top: 2em;
                     }
+                    @media (max-width:769px){
+                        font-size: 2.5em;
+                    }
                 }
                 p{
                     color: var(--dark-grey);
@@ -34,6 +46,10 @@
                     margin: {
                         top:2em;
                         bottom:4em;
+                    }
+                    @media (max-width:769px){
+                        width:100%;
+                        color:var(--very-light-gray)
                     }
                 }
             }
@@ -55,16 +71,33 @@
                 right:6em;
             }
             border-radius: 12px;
+            @media (max-width:769px){
+                flex-direction: column;
+                padding:1em;
+                text-align: center;
+            }
             img{
                 width:40%;
-                margin-bottom: -4.4em
+                margin-bottom: -4.4em;
+                @media (max-width:769px){
+                    width:80%;
+                    margin-bottom: 3em;
+                }
             }
             div{
                 width:50%;
+                @media (max-width:769px){
+                    width: 90%;
+                    margin:0 auto;
+                    padding-bottom: 2em;
+                }
                 h1{
                     @include font-param(4.5em, 700);
                     letter-spacing:3px;
                     line-height: 1;
+                    @media (max-width:769px){
+                        font-size: 3em;
+                    }
                 }
                 p{
                     @include font-param(1em,200);
@@ -72,6 +105,10 @@
                     margin:1.2em 0 4em;  
                     width:80%;
                     word-spacing: 4px;
+                    @media (max-width:769px){
+                        width:100%;
+                        margin-bottom: 2em;
+                    }
                 }
                 #zx9-btn{
                     @include product-btn(black,white,white,black);
@@ -84,26 +121,46 @@
             border-radius: 12px;
             background: url(./../assets/images/image-speaker-zx7.jpg) no-repeat;
             background-size: cover;
+            @media (max-width:769px) {
+                margin-top: 3em 0 0;
+            }
             div{
                 @include flex(column);
                 width:50%;
                 height: 100%;
                 place-items: center;
                 place-content: center;
+                @media (max-width:769px) {
+                    width: 90%;
+                    margin: 0 auto;
+                }
             }
         }
         #part-two-3{
             @include flex;
             margin-bottom: 4em;
+            @media (max-width:769px){
+                flex-direction: column;
+                img{
+                    margin-top: 3em;
+                }
+            }
             img,div{
                 border-radius: 15px;
                 width:47%;
+                @media (max-width:769px) {
+                    width:100%
+                }
             }
             div{
                 @include flex(column);
                 background-color: var(--very-light-gray);
                 place-items: center;
                 place-content: center;
+                @media (max-width:769px){
+                    margin: 1em 0;
+                    padding: 2em;
+                }
             }
         }
     }

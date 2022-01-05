@@ -2,6 +2,11 @@
 .categories{
     @include flex;
     margin: 12em 0 8em;
+    @media (max-width:769px){
+        flex-direction: column;
+        margin-top: 6em;
+        margin-bottom: 2em;
+    }
     div{
         background-color: var(--very-light-gray);
         width:30%;
@@ -12,6 +17,10 @@
         img[alt="category-img"]{
             width:40%;
             margin-top: -3em;
+        }
+        @media (max-width:769px){
+            width:90%;
+            margin:0 auto 4em;
         }
         h1{
             @include font-param(1.2em,600);

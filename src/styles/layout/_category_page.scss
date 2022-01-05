@@ -20,6 +20,9 @@
             @include flex;
             &:nth-child(even){
                 @include flex(row-reverse);
+                @media (max-width:769px){
+                    flex-direction: column;
+                }
             }
             img{
                 width: 50%;
@@ -29,6 +32,13 @@
                 @extend %product-intro;
                 p{
                     margin-bottom: 4em;
+                }
+            }
+            @media (max-width:769px){
+                flex-direction: column;
+                img{
+                    width: 100%;
+                    border-radius: 1em;
                 }
             }
         }

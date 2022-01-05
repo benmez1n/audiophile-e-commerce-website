@@ -126,9 +126,36 @@
                 }
                 input{width: 100%;}
             }
+            @media (max-width:769px){
+                flex-direction: column;
+                >div:first-child,
+                >div:last-child{width:100%;}
+                >div:first-child{
+                    div.billing-details{
+                        grid-template-columns: 100%
+                    }
+                    div.shipping-info{
+                        grid-template-columns: 100%;
+                        label:first-child{
+                            grid-column: 1/1;
+                        }
+                    }
+                    div.payment-details{
+                        >label:first-child{
+                            display:grid;
+                        }
+                        .emoney-checked{
+                            display: grid;
+                            grid-template-columns: 100%;
+                            gap:4%;
+                        }
+                    }
+                }
+            }
         }
     }
 }
+
 .order-bg{
     position: fixed;
     top:0;
