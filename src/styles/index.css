@@ -1291,13 +1291,21 @@ body ::-webkit-scrollbar-thumb:hover, .order .order-container ::-webkit-scrollba
 
 footer {
   background-color: var(--black-bg);
-  text-align: center;
+}
+@media (max-width: 769px) {
+  footer {
+    text-align: center;
+  }
 }
 footer nav .container {
   padding: 0;
   border-bottom: none;
-  flex-direction: column;
-  place-items: center;
+}
+@media (max-width: 769px) {
+  footer nav .container {
+    flex-direction: column;
+    place-items: center;
+  }
 }
 footer nav .container > img {
   padding-top: 4.4em;
@@ -1328,10 +1336,10 @@ footer .container div {
   flex-direction: row;
   justify-content: space-between;
   margin: 3em 0 2em;
-  place-items: center;
 }
 @media (max-width: 769px) {
   footer .container div {
+    place-items: center;
     flex-direction: column;
   }
 }

@@ -1,13 +1,17 @@
 @import './../helpers/mixins';
 footer{
     background-color: var(--black-bg);
-    text-align: center;
+    @media (max-width:769px){
+        text-align: center;
+    }
     nav{
         .container{
             padding:0;
             border-bottom: none;
-            flex-direction: column;
-            place-items: center;
+            @media (max-width:769px){
+                flex-direction: column;
+                place-items: center;
+            }
             >img{
                 padding-top: 4.4em;
                 border-top: 5px solid var(--orange);
@@ -31,8 +35,8 @@ footer{
     .container div{
         @include flex;
         margin: 3em 0 2em;
-        place-items: center;
         @media (max-width:769px){
+            place-items: center;
             flex-direction: column;
         }
         p{
